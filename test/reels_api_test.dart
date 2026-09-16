@@ -49,7 +49,7 @@ void main() {
     expect(item.product!.productUrl, contains('myshopify.com'));
   });
 
-  test('Live ReelsApiService test against local backend', () async {
+  test('Live ReelsApiService test against live backend', () async {
     final service = ReelsApiService();
     final response = await service.fetchReels(page: 1, limit: 5);
     service.dispose();

@@ -5,18 +5,14 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 class SplashConstants {
   SplashConstants._();
 
+  /// Live Backend API Base URL
+  static const String apiBaseUrl = 'https://api.ilaviya.com';
+
   /// Default API URL for fetching dynamic splash configuration.
-  /// On Android emulator, '10.0.2.2' can be used if localhost fails,
-  /// but 'http://localhost:5000/api/splash' is the primary target as requested.
-  static const String defaultApiUrl = 'http://localhost:5000/api/splash';
+  static const String defaultApiUrl = '$apiBaseUrl/api/splash';
 
   /// Returns the appropriate endpoint URL based on the runtime platform.
   static String get resolvedApiUrl {
-    if (!kIsWeb && Platform.isAndroid) {
-      // In local development on Android emulator, 10.0.2.2 maps to host localhost.
-      // However, we support defaultApiUrl as primary while providing this helper.
-      return defaultApiUrl;
-    }
     return defaultApiUrl;
   }
 
@@ -39,13 +35,10 @@ class SplashConstants {
   static const String shopifyStoreUrl = 'https://ilaviya.com/';
 
   /// Modeling Reels API Endpoint URL
-  static const String modelingReelsApiUrl = 'http://localhost:5000/api/reels';
+  static const String modelingReelsApiUrl = '$apiBaseUrl/api/reels';
 
   /// Returns the appropriate Reels endpoint URL based on runtime platform.
   static String get resolvedModelingReelsApiUrl {
-    if (!kIsWeb && Platform.isAndroid) {
-      return modelingReelsApiUrl;
-    }
     return modelingReelsApiUrl;
   }
 
