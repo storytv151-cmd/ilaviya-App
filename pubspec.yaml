@@ -38,6 +38,14 @@ dependencies:
   video_player: ^2.14.0
   shared_preferences: ^2.5.5
   webview_flutter: ^4.14.1
+  google_mobile_ads: ^9.0.0
+  firebase_remote_config: ^6.5.5
+  get_storage: ^2.1.1
+  get: ^4.7.3
+  firebase_core: ^4.15.0
+  firebase_crashlytics: ^5.2.4
+  firebase_analytics: ^12.4.3
+
 
 dev_dependencies:
   flutter_test:
