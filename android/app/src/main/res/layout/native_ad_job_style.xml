@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/native_ad_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_rounded_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Top Section: App Icon + Text info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- App Icon with rounded corners applied programmatically -->
+            <ImageView
+                android:id="@+id/ad_app_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Ad Icon"/>
+
+            <!-- Headline and Advertiser Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <!-- Headline -->
+                <TextView
+                    android:id="@+id/primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#1e3a8a"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginBottom="4dp"
+                    android:clickable="false"
+                    android:focusable="false"/>
+
+                <!-- Ad Tag + Advertiser -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Ad Badge -->
+                    <TextView
+                        android:id="@+id/ad_notification_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ad"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="#4B5563"
+                        android:background="@drawable/bg_ad_badge_light_gray"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="1.5dp"
+                        android:layout_marginEnd="6dp"
+                        android:gravity="center"
+                        android:clickable="false"
+                        android:focusable="false"/>
+
+                    <!-- Advertiser -->
+                    <TextView
+                        android:id="@+id/body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#4B5563"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:clickable="false"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+
+        <!-- CTA Full Width -->
+        <TextView
+            android:id="@+id/cta"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:background="@drawable/bg_cta_blue"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="Install"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</com.google.android.gms.ads.nativead.NativeAdView>
